@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>aiassurancecase.com - Concept Note (AI Assurance Case)</title>
+  <meta name="description" content="Concept note for AI Assurance Case: a vendor-neutral, inspection-ready CAE structure for high-risk AI, with evidence taxonomy, mappings, and procurement language." />
+  <link rel="canonical" href="https://www.aiassurancecase.com/concept-note.html" />
+  <link rel="alternate" hreflang="en" href="https://www.aiassurancecase.com/concept-note.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.aiassurancecase.com/concept-note.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.aiassurancecase.com/concept-note.html" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="aiassurancecase.com - Concept Note" />
+  <meta property="og:description" content="Vendor-neutral concept note for AI Assurance Case: CAE structure, evidence taxonomy, mappings, and procurement language." />
+  <meta property="og:url" content="https://www.aiassurancecase.com/concept-note.html" />
+  <meta property="og:image" content="https://www.aiassurancecase.com/og.jpg" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="/logo-aiassurancecase.png" />
+
+  <style>
+    :root{
+      --bg:#050816;
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.06);
+      --stroke:rgba(255,255,255,.10);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --muted2:rgba(255,255,255,.58);
+      --accent:#63e6ff;
+      --accent2:#7c5cff;
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+      --radius2:24px;
+      --max:980px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(99,230,255,.12), transparent 60%),
+        radial-gradient(800px 500px at 90% 15%, rgba(124,92,255,.10), transparent 55%),
+        radial-gradient(900px 600px at 50% 120%, rgba(99,230,255,.08), transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 44px}
+    .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px}
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, var(--panel), rgba(255,255,255,.02));
+      border-radius:999px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      font-size:13px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:radial-gradient(circle at 30% 30%, #ffffff, var(--accent) 55%, rgba(99,230,255,.2) 100%);
+      box-shadow:0 0 0 4px rgba(99,230,255,.12);
+    }
+    .lang{display:flex; gap:8px}
+    .lang button{
+      cursor:pointer;
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, var(--panel), rgba(255,255,255,.02));
+      color:var(--muted);
+      padding:9px 12px;
+      border-radius:999px;
+      font-weight:700;
+      letter-spacing:.02em;
+      font-size:12px;
+    }
+    .lang button[aria-pressed="true"]{
+      color:#03101a;
+      border-color:rgba(99,230,255,.55);
+      background:linear-gradient(180deg, rgba(99,230,255,.95), rgba(99,230,255,.65));
+      box-shadow:0 12px 30px rgba(99,230,255,.18);
+    }
+    .card{
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, var(--panel2), rgba(255,255,255,.02));
+      border-radius:var(--radius2);
+      padding:18px 18px;
+      box-shadow:var(--shadow);
+    }
+    .hero{display:flex; flex-direction:column; align-items:center; text-align:center; padding:22px 18px}
+    h1{margin:6px 0 8px; font-size:34px; letter-spacing:-.02em}
+    h2{margin:0 0 10px; font-size:18px; color:var(--muted)}
+    h3{margin:0 0 10px; font-size:16px; letter-spacing:-.01em}
+    p{margin:10px 0}
+    .muted{color:var(--muted)}
+    .muted2{color:var(--muted2)}
+    .logo{
+      width:84px; height:84px; object-fit:contain;
+      margin:10px 0 6px;
+      filter: drop-shadow(0 18px 38px rgba(0,0,0,.55));
+    }
+    .cta{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      text-decoration:none;
+      color:var(--text);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      font-weight:800;
+      font-size:13px;
+    }
+    .btn.primary{
+      border-color:rgba(99,230,255,.55);
+      background:linear-gradient(180deg, rgba(99,230,255,.95), rgba(99,230,255,.65));
+      color:#03101a;
+      box-shadow:0 14px 34px rgba(99,230,255,.16);
+    }
+    .grid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:14px}
+    .section-tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:10px;
+    }
+    ul{margin:10px 0 0; padding-left:18px}
+    li{margin:6px 0; color:var(--muted)}
+    .list{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .chip{
+      display:inline-flex;
+      padding:9px 11px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      text-decoration:none;
+      color:var(--text);
+      font-weight:800;
+      font-size:13px;
+    }
+    .foot{margin-top:16px; font-size:12px; color:var(--muted2)}
+    .foot a{color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="badge"><span class="dot"></span> Concept Note · aiassurancecase.com</div>
+      <div class="lang" aria-label="Language toggle">
+        <button id="btn-en" aria-pressed="true" type="button">EN</button>
+        <button id="btn-fr" aria-pressed="false" type="button">FR</button>
+      </div>
+    </div>
+
+    <!-- HERO EN -->
+    <section class="card hero" data-en>
+      <h1>AI Assurance Case</h1>
+      <img class="logo" src="/logo-aiassurancecase.png" alt="aiassurancecase.com" loading="eager" />
+      <h2>Vendor-neutral concept note for an inspection-ready CAE artifact for high-risk AI</h2>
+      <p class="muted">
+        Informational only. Not a regulator. Not a certification body. Not legal, compliance, audit, or security advice.
+        This concept note describes a neutral structure and language pattern for <b>claims, arguments, and evidence</b>
+        that can withstand third-party review.
+      </p>
+      <div class="cta">
+        <a class="btn" href="/">Back to site</a>
+        <a class="btn primary" href="mailto:contact@aiassurancecase.com?subject=aiassurancecase.com%20-%20Concept%20Note%20-%20NDA%20%2F%20Offer">Acquisition enquiries</a>
+      </div>
+    </section>
+
+    <!-- HERO FR -->
+    <section class="card hero" data-fr hidden>
+      <h1>AI Assurance Case</h1>
+      <img class="logo" src="/logo-aiassurancecase.png" alt="aiassurancecase.com" loading="eager" />
+      <h2>Note de concept neutre pour un artefact CAE “inspection-ready” destiné à l’IA à risque</h2>
+      <p class="muted">
+        Informatif uniquement. Ni régulateur, ni autorité de certification. Aucun conseil juridique, conformité, audit ou sécurité.
+        Cette note décrit un gabarit neutre de langage et de structure <b>claims, arguments, preuves</b> pour revue tierce.
+      </p>
+      <div class="cta">
+        <a class="btn" href="/">Retour au site</a>
+        <a class="btn primary" href="mailto:contact@aiassurancecase.com?subject=aiassurancecase.com%20-%20Concept%20Note%20-%20NDA%20%2F%20Proposition">Échanges acquisition</a>
+      </div>
+    </section>
+
+    <div class="grid">
+
+      <!-- EN: Definition -->
+      <section class="card" data-en>
+        <div class="section-tag">1. Definition and scope</div>
+        <h3>Definition</h3>
+        <p class="muted">
+          An AI Assurance Case is a structured bundle of <b>claims, arguments, and evidence (CAE)</b> that provides reasonable
+          confidence that a high-risk AI system meets required properties in a given operational context, and that residual risks
+          are explicitly understood and controlled.
+        </p>
+        <p class="muted2">Scope: inspection-ready documentation for procurement scrutiny, audit review, insurer underwriting, and high-stakes deployment oversight.</p>
+      </section>
+
+      <!-- FR: Definition -->
+      <section class="card" data-fr hidden>
+        <div class="section-tag">1. Définition et périmètre</div>
+        <h3>Définition</h3>
+        <p class="muted">
+          Un AI Assurance Case est un dossier structuré de <b>claims, arguments et preuves (CAE)</b> visant à donner une confiance raisonnable
+          qu’un système IA à risque élevé respecte les propriétés requises dans un contexte donné, et que les risques résiduels
+          sont explicitement compris et maîtrisés.
+        </p>
+        <p class="muted2">Périmètre : documentation inspection-ready pour revue Achats, audit, underwriting assureur et supervision à enjeux élevés.</p>
+      </section>
+
+      <!-- EN: Minimal structure -->
+      <section class="card" data-en>
+        <div class="section-tag">2. Minimal structure</div>
+        <h3>Minimal, reviewable CAE skeleton</h3>
+        <ul>
+          <li><b>Top claim</b>: what property is being assured (and for which operational context).</li>
+          <li><b>Sub-claims</b>: decomposed, reviewable assertions tied to controls and responsibilities.</li>
+          <li><b>Argument strategy</b>: why the evidence supports the claims; how uncertainty is handled.</li>
+          <li><b>Evidence set</b>: tests, evaluations, policies, monitoring, incident handling, security controls.</li>
+          <li><b>Residual risk statement</b>: explicit limits, assumptions, unknowns, and remaining exposure.</li>
+          <li><b>Accountability</b>: who asserted what, on which evidence, at which date and version.</li>
+        </ul>
+      </section>
+
+      <!-- FR: Minimal structure -->
+      <section class="card" data-fr hidden>
+        <div class="section-tag">2. Structure minimale</div>
+        <h3>Socle CAE minimal, inspectable</h3>
+        <ul>
+          <li><b>Claim principal</b> : propriété assurée et contexte d’usage.</li>
+          <li><b>Sous-claims</b> : assertions décomposées et examinables, reliées aux contrôles et responsabilités.</li>
+          <li><b>Stratégie d’argumentation</b> : pourquoi les preuves soutiennent les claims, gestion de l’incertitude.</li>
+          <li><b>Ensemble de preuves</b> : tests, évaluations, politiques, monitoring, incidents, contrôles sécurité.</li>
+          <li><b>Risque résiduel</b> : limites, hypothèses, inconnues, exposition restante.</li>
+          <li><b>Accountability</b> : qui affirme quoi, sur quelles preuves, à quelle date/version.</li>
+        </ul>
+      </section>
+
+      <!-- EN: Evidence taxonomy -->
+      <section class="card" data-en>
+        <div class="section-tag">3. Evidence taxonomy</div>
+        <h3>Procurement-friendly evidence classes</h3>
+        <ul>
+          <li><b>Governance evidence</b>: roles, policies, reviews, approvals, change management.</li>
+          <li><b>Evaluation evidence</b>: test plans, benchmarks, red-team results, limitations.</li>
+          <li><b>Monitoring evidence</b>: drift monitoring, incident handling, post-deployment review.</li>
+          <li><b>Security evidence</b>: access control, logging, integrity controls, threat modeling.</li>
+        </ul>
+        <p class="muted2">The intent is not completeness. The intent is inspectability: evidence that a third party can verify.</p>
+      </section>
+
+      <!-- FR: Evidence taxonomy -->
+      <section class="card" data-fr hidden>
+        <div class="section-tag">3. Taxonomie de preuves</div>
+        <h3>Catégories de preuves “procurement-friendly”</h3>
+        <ul>
+          <li><b>Preuves de gouvernance</b> : rôles, politiques, revues, validations, gestion du changement.</li>
+          <li><b>Preuves d’évaluation</b> : plans de tests, benchmarks, red-team, limites.</li>
+          <li><b>Preuves de monitoring</b> : dérive, incidents, revues post-déploiement.</li>
+          <li><b>Preuves de sécurité</b> : contrôle d’accès, logs, intégrité, threat modeling.</li>
+        </ul>
+        <p class="muted2">Objectif : l’inspectabilité, pas l’exhaustivité.</p>
+      </section>
+
+      <!-- EN: Mappings -->
+      <section class="card" data-en>
+        <div class="section-tag">4. Mappings</div>
+        <h3>Alignment layers (illustrative)</h3>
+        <ul>
+          <li><b>Assurance case structure</b>: ISO/IEC/IEEE 15026-2 (terminology and structure).</li>
+          <li><b>Risk management</b>: NIST AI RMF (Govern, Map, Measure, Manage).</li>
+          <li><b>Management system</b>: ISO/IEC 42001 (AI management system governance).</li>
+          <li><b>High-risk documentation</b>: EU AI Act technical documentation logic (Article 11, Annex IV).</li>
+        </ul>
+      </section>
+
+      <!-- FR: Mappings -->
+      <section class="card" data-fr hidden>
+        <div class="section-tag">4. Mappings</div>
+        <h3>Couches d’alignement (illustratif)</h3>
+        <ul>
+          <li><b>Structure assurance case</b> : ISO/IEC/IEEE 15026-2 (terminologie et structure).</li>
+          <li><b>Gestion des risques</b> : NIST AI RMF (Govern, Map, Measure, Manage).</li>
+          <li><b>Système de management</b> : ISO/IEC 42001 (gouvernance).</li>
+          <li><b>Documentation high-risk</b> : logique de documentation technique UE (Article 11, Annexe IV).</li>
+        </ul>
+      </section>
+
+      <!-- EN: Non-claims -->
+      <section class="card" data-en>
+        <div class="section-tag">5. Non-claims and disclaimers</div>
+        <h3>What this is not</h3>
+        <ul>
+          <li>Not a certification, not a regulator program, not a standards body, not a vendor label.</li>
+          <li>Not a promise of compliance, assurance, safety, security, or performance.</li>
+          <li>Not an audit firm, not consulting, not legal advice, not a commercial tool or platform.</li>
+          <li>No third-party compliance claims. References are cited as public sources only.</li>
+        </ul>
+      </section>
+
+      <!-- FR: Non-claims -->
+      <section class="card" data-fr hidden>
+        <div class="section-tag">5. Non-claims et disclaimers</div>
+        <h3>Ce que ce n’est pas</h3>
+        <ul>
+          <li>Ni certification, ni programme régulateur, ni organisme de normalisation, ni label fournisseur.</li>
+          <li>Aucune promesse de conformité, d’assurance, de sûreté, de sécurité ou de performance.</li>
+          <li>Ni cabinet d’audit, ni conseil, ni avis juridique, ni outil ou plateforme commerciale.</li>
+          <li>Aucune revendication de conformité sur des tiers. Les références sont des sources publiques uniquement.</li>
+        </ul>
+      </section>
+
+      <!-- EN: Procurement language -->
+      <section class="card" data-en>
+        <div class="section-tag">6. Procurement language</div>
+        <h3>Illustrative contract clauses (examples)</h3>
+        <ul>
+          <li>Supplier shall provide an AI assurance case structured as <b>claims, arguments, and evidence</b>.</li>
+          <li>The assurance case shall be <b>inspection-ready</b> and suitable for third-party review.</li>
+          <li>Evidence shall include governance, evaluation, monitoring, and security artifacts, with versioning and dates.</li>
+          <li>Residual risks and limitations shall be explicitly stated and approved by accountable owners.</li>
+          <li>Material changes to the model or deployment shall trigger an assurance case update and review.</li>
+        </ul>
+        <p class="muted2">These clauses are illustrative only and are not legal advice.</p>
+      </section>
+
+      <!-- FR: Procurement language -->
+      <section class="card" data-fr hidden>
+        <div class="section-tag">6. Langage Achats</div>
+        <h3>Clauses types (exemples)</h3>
+        <ul>
+          <li>Le fournisseur fournit un AI assurance case structuré en <b>claims, arguments et preuves</b>.</li>
+          <li>Le dossier est <b>inspection-ready</b> et apte à une revue tierce.</li>
+          <li>Les preuves incluent gouvernance, évaluation, monitoring et sécurité, avec versioning et dates.</li>
+          <li>Les risques résiduels et limites sont explicitement décrits et validés par des responsables nommés.</li>
+          <li>Toute modification matérielle du modèle ou du déploiement déclenche une mise à jour et une revue.</li>
+        </ul>
+        <p class="muted2">Exemples uniquement. Ceci ne constitue pas un avis juridique.</p>
+      </section>
+
+      <!-- EN: References -->
+      <section class="card" data-en>
+        <div class="section-tag">References</div>
+        <h3>Primary curated sources</h3>
+        <div class="list">
+          <a class="chip" href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/explaining-decisions-made-with-artificial-intelligence/annexe-5-argument-based-assurance-cases/" target="_blank" rel="noopener">ICO</a>
+          <a class="chip" href="https://www.iso.org/standard/80625.html" target="_blank" rel="noopener">ISO/IEC/IEEE 15026-2</a>
+          <a class="chip" href="https://www.gov.uk/government/publications/introduction-to-ai-assurance/introduction-to-ai-assurance" target="_blank" rel="noopener">UK Gov</a>
+          <a class="chip" href="https://www.aisi.gov.uk/blog/safety-case-template-for-inability-arguments" target="_blank" rel="noopener">AI Security Institute</a>
+          <a class="chip" href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf" target="_blank" rel="noopener">NIST AI RMF</a>
+          <a class="chip" href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-11" target="_blank" rel="noopener">EU AI Act - Art. 11</a>
+          <a class="chip" href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-4" target="_blank" rel="noopener">EU AI Act - Annex IV</a>
+          <a class="chip" href="https://cetas.turing.ac.uk/publications/assurance-third-party-ai-systems-uk-national-security" target="_blank" rel="noopener">CETaS</a>
+          <a class="chip" href="https://www.iso.org/standard/42001" target="_blank" rel="noopener">ISO/IEC 42001</a>
+        </div>
+      </section>
+
+      <!-- FR: References -->
+      <section class="card" data-fr hidden>
+        <div class="section-tag">Références</div>
+        <h3>Sources primaires (curation)</h3>
+        <div class="list">
+          <a class="chip" href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/explaining-decisions-made-with-artificial-intelligence/annexe-5-argument-based-assurance-cases/" target="_blank" rel="noopener">ICO</a>
+          <a class="chip" href="https://www.iso.org/standard/80625.html" target="_blank" rel="noopener">ISO/IEC/IEEE 15026-2</a>
+          <a class="chip" href="https://www.gov.uk/government/publications/introduction-to-ai-assurance/introduction-to-ai-assurance" target="_blank" rel="noopener">UK Gov</a>
+          <a class="chip" href="https://www.aisi.gov.uk/blog/safety-case-template-for-inability-arguments" target="_blank" rel="noopener">AI Security Institute</a>
+          <a class="chip" href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf" target="_blank" rel="noopener">NIST AI RMF</a>
+          <a class="chip" href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-11" target="_blank" rel="noopener">EU AI Act - Art. 11</a>
+          <a class="chip" href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-4" target="_blank" rel="noopener">EU AI Act - Annexe IV</a>
+          <a class="chip" href="https://cetas.turing.ac.uk/publications/assurance-third-party-ai-systems-uk-national-security" target="_blank" rel="noopener">CETaS</a>
+          <a class="chip" href="https://www.iso.org/standard/42001" target="_blank" rel="noopener">ISO/IEC 42001</a>
+        </div>
+      </section>
+
+    </div>
+
+    <p class="foot muted">
+      © aiassurancecase.com - concept note. Independent informational resource. No affiliation with any referenced entity.
+      No legal, compliance, audit, security, financial, or investment advice. Contact:
+      <a href="mailto:contact@aiassurancecase.com">contact@aiassurancecase.com</a>
+    </p>
+  </div>
+
+  <script>
+    const frBtn = document.getElementById('btn-fr');
+    const enBtn = document.getElementById('btn-en');
+
+    function show(lang){
+      document.querySelectorAll('[data-fr]').forEach(n => n.hidden = (lang !== 'fr'));
+      document.querySelectorAll('[data-en]').forEach(n => n.hidden = (lang !== 'en'));
+      frBtn.setAttribute('aria-pressed', String(lang === 'fr'));
+      enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+      document.documentElement.lang = lang;
+    }
+
+    frBtn.addEventListener('click', () => show('fr'));
+    enBtn.addEventListener('click', () => show('en'));
+    show('en');
+  </script>
+</body>
+</html>
